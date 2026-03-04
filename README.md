@@ -14,20 +14,11 @@ A CLI tool for controlling Home Assistant, designed for use as an LLM agent skil
 
 ## Installation
 
-### Binary download
-
-Download the latest binary from [GitHub Releases](https://github.com/jonson/ha-ctl/releases):
-
 ```bash
-curl -fsSL https://github.com/jonson/ha-ctl/releases/latest/download/ha-ctl-linux-amd64 -o ha-ctl
-chmod +x ha-ctl
+go install github.com/jonson/ha-ctl@latest
 ```
 
-### Install script
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/jonson/ha-ctl/main/install.sh | bash
-```
+Or download a binary from [GitHub Releases](https://github.com/jonson/ha-ctl/releases).
 
 ## Configuration
 
