@@ -39,6 +39,8 @@ cache_ttl: 300
 
 Environment variables take precedence over the config file.
 
+To create a long-lived access token: open your Home Assistant instance, click your profile name (bottom-left), scroll to **Long-Lived Access Tokens**, and click **Create Token**.
+
 ## Usage
 
 ```bash
