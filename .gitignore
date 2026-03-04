@@ -1,0 +1,5 @@
+.env
+ha-ctl
+ha-ctl-linux-*
+dist/
+*.env.local

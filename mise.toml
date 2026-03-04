@@ -1,0 +1,30 @@
+[env]
+_.file = ".env"
+
+[tools]
+go = "1.25"
+goreleaser = "latest"
+
+[tasks.build]
+description = "Build ha-ctl for the current platform"
+run = "go build -trimpath -ldflags '-s -w -X main.version=dev' -o ha-ctl ."
+
+[tasks.test]
+description = "Run unit tests"
+run = "go test ./..."
+
+[tasks.test-integration]
+description = "Run integration tests (requires HA_URL/HA_TOKEN)"
+run = "go test -tags=integration ./..."
+
+[tasks.snapshot]
+description = "Build a local snapshot release (no publish)"
+run = "goreleaser release --snapshot --clean"
+
+[tasks.release]
+description = "Create a release with goreleaser (requires GITHUB_TOKEN)"
+run = "goreleaser release --clean"
+
+[tasks.clean]
+description = "Remove build artifacts"
+run = "rm -f ha-ctl ha-ctl-linux-amd64 ha-ctl-linux-arm64 && rm -rf dist/"
